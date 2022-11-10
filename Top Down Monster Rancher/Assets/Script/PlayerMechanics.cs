@@ -6,8 +6,12 @@ public class PlayerMechanics : MonoBehaviour
 {
 
     public GameObject Room;
+    public GameObject Tree;
+    public GameObject Rock;
     public GameObject Bullet;
     public int mush = 0;
+    public int root = 0;
+    public int pebble = 0;
     public int howMany = 0;
     public int money = 0;
     public GameController GameManager;
@@ -27,7 +31,7 @@ public class PlayerMechanics : MonoBehaviour
             Instantiate(Bullet, this.transform.position, Quaternion.identity);
         }
         //MONEY NO WORK???
-        money = howMany * 100;
+        money = howMany * 25;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -51,6 +55,32 @@ public class PlayerMechanics : MonoBehaviour
             mush--;
             howMany++;
             Instantiate(Room, collision.gameObject.transform.position, Quaternion.identity);
+        }
+        if (collision.gameObject.tag == "Tree")
+        {
+            root += 1;
+            Destroy(collision.gameObject);
+         
+        }
+
+        if (collision.gameObject.name == "right wall" && root >= 1)
+        {
+            root--;
+            howMany+= 2;
+            Instantiate(Tree, collision.gameObject.transform.position, Quaternion.identity);
+        }
+        if (collision.gameObject.tag == "Rock")
+        {
+            pebble += 1;
+            Destroy(collision.gameObject);
+         
+        }
+
+        if (collision.gameObject.name == "right wall" && pebble >= 1)
+        {
+            pebble--;
+            howMany+=3;
+            Instantiate(Rock, collision.gameObject.transform.position, Quaternion.identity);
         }
     }
 }

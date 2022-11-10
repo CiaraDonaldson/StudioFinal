@@ -24,8 +24,28 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
+
         rigidbody.MovePosition(rigidbody.position + movement * movementSpeed * Time.fixedDeltaTime);
-        anim.Play("PlayerUp");
+        if (movement.y < 0)
+        {
+            anim.Play("PlayerUp");
+        }
+        else if (movement.y > 0)
+        {
+            anim.Play("PlayerDown");
+        }
+        else if (movement.x < 0)
+        {
+            anim.Play("Player Left");
+        }
+        else if (movement.x > 0)
+        {
+            anim.Play("Player Right");
+        }
+        else 
+        {
+            anim.Play("Idle");
+        }
     }
 }
 

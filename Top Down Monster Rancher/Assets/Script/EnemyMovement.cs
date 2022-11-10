@@ -6,13 +6,13 @@ public class EnemyMovement : MonoBehaviour
 {
     public Transform target;
     public float speed = 2f;
-    private float minDistance = 1f;
+    //private float minDistance = 1f;
     private float range;
     public int counter = 0;
 
     void Start()
     {
-        //GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Room")
+        //GameObject[] gos = GameObject.FindGameObjectsWithTag("Room")
     }
     void Update()
     {
@@ -44,7 +44,7 @@ public class EnemyMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.tag == "room")
+        if (collision.gameObject.tag == "Room")
         {
             Destroy(collision.gameObject);
         }
@@ -52,8 +52,8 @@ public class EnemyMovement : MonoBehaviour
 
     public GameObject FindClosestEnemy()
     {
-        GameObject[] gos;
-        gos = GameObject.FindGameObjectsWithTag("Room");
+        
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Room");
         GameObject closest = null;
         float distance = Mathf.Infinity;
         Vector3 position = transform.position;

@@ -50,8 +50,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Room: {fileID: 636997522942542729, guid: 5216d3da87d82204d9a8e589279a4c3f, type: 3}
+  Tree: {fileID: 636997522942542729, guid: c832f3fb39c04a24f81767feae2339c9, type: 3}
+  Rock: {fileID: 636997522942542729, guid: 74ab16713ee3bbe42834c096fc0303e0, type: 3}
   Bullet: {fileID: 8806444799239173949, guid: 3daf6fafd8d7c04448655082f9a766b7, type: 3}
   mush: 0
+  root: 0
+  pebble: 0
   howMany: 0
   money: 0
   GameManager: {fileID: 8572663088352648871, guid: d382b65280c7474408890c639ec286ad, type: 3}
