@@ -11,16 +11,13 @@ public class GameController : MonoBehaviour
     public int saved = 0;
 
     public GameObject go; 
-    public GameObject Player;
+
     public PlayerMechanics PlayerScript;
     // Start is called before the first frame update
-    void Awake()
-    {
-        Instantiate(Player, new Vector3(0, 0, -1), Quaternion.identity);
-    }
+
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+       // DontDestroyOnLoad(this.gameObject);
         PlayerScript = FindObjectOfType<PlayerMechanics>();
         go = GameObject.Find("Player");
         PlayerScript = (PlayerMechanics)go.GetComponent(typeof(PlayerMechanics));
