@@ -6,67 +6,76 @@ public class EnemyMovement : MonoBehaviour
 {
     public Transform target;
     public float speed = 2f;
-    //private float minDistance = 1f;
+    private float minDistance = 1f;
     private float range;
     public int counter = 0;
+    public Animator anim;
 
+    public Transform[] roomTrans;
     void Start()
     {
-        //GameObject[] gos = GameObject.FindGameObjectsWithTag("Room")
+        //GameObject[] gos;
+        //gos = GameObject.FindGameObjectsWithTag("Room");
+
+       
+
+      
     }
     void Update()
     {
-        FindClosestEnemy();
-        
-       /* range = Vector2.Distance(transform.position, target.position);
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Room");
 
-        if (range > minDistance)
+        roomTrans = new Transform[gameObjects.Length];
+
+        for (int i = 0; i < gameObjects.Length; i++)
         {
-           transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        }*/
+            roomTrans[i] = gameObjects[i].transform;
+            range = Vector2.Distance(transform.position, roomTrans[i].position);
 
+
+            if (range > minDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, roomTrans[i].position, speed * Time.deltaTime);
+            }
+        }
+
+        Debug.Log($"{roomTrans.Length.ToString()} Room(s) found.");
+   
+
+       
         if (counter == 3)
         {
+            anim.Play("Sleep");
             GetComponent<Rigidbody2D>().isKinematic = false;
         }
     }
-    void onTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == "Bullet")
         {
-            Debug.Log("Hurt");
-            counter+=1;
+            counter++;
 
         }
-
     }
-    void OnCollisionEnter2D(Collision2D collision)
+
+        void OnCollisionEnter2D(Collision2D collision)
     {
 
         if (collision.gameObject.tag == "Room")
         {
             Destroy(collision.gameObject);
         }
+
+        if (collision.gameObject.tag == "Tree")
+        {
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Rock")
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
-    public GameObject FindClosestEnemy()
-    {
-        
-        GameObject[] gos = GameObject.FindGameObjectsWithTag("Room");
-        GameObject closest = null;
-        float distance = Mathf.Infinity;
-        Vector3 position = transform.position;
-        foreach (GameObject go in gos)
-        {
-            Vector3 diff = go.transform.position - position;
-            float curDistance = diff.sqrMagnitude;
-            if (curDistance < distance)
-            {
-                closest = go;
-                distance = curDistance;
-            }
-        }
-        return closest;
-    }
+
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1860670719290046655}
   - component: {fileID: 1048474553695418581}
   - component: {fileID: 8287432438053101240}
+  - component: {fileID: 1439956570430103956}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   target: {fileID: 636997522942542743, guid: 5216d3da87d82204d9a8e589279a4c3f, type: 3}
   speed: 2
   counter: 0
+  anim: {fileID: 1439956570430103956}
 --- !u!212 &1860670719290046655
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -139,3 +141,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &1439956570430103956
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860670719290046653}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d70ee6c79eb5cdb4caca76ec86281669, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

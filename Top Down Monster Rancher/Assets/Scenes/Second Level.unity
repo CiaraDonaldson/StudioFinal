@@ -7914,6 +7914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1860670719290046654, guid: 096d56fcbfae32441be3595c81964315, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1628687818}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 096d56fcbfae32441be3595c81964315, type: 3}
 --- !u!1 &726979433
@@ -8931,8 +8935,28 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &1628687818
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628687808}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d70ee6c79eb5cdb4caca76ec86281669, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1673479654
 GameObject:
   m_ObjectHideFlags: 0

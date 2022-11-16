@@ -17,4 +17,16 @@ public class Bullet : MonoBehaviour
     {
        rb.AddForce(Vector2.right * 6);  
     }
+
+    void onTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.name == "Enemy")
+        {
+            Debug.Log("Hurt");
+           // EnemyMovement.counter += 1;
+
+        }
+
+    }
 }
