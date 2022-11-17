@@ -63,22 +63,21 @@ public class EnemyMovement1 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-
         if (collision.gameObject.tag == "Room")
         {
-            Instantiate(Blood, collision.gameObject.transform);
+            Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "Tree")
         {
-            Instantiate(Blood, collision.gameObject.transform);
+            Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "Rock")
         {
-            Instantiate(Blood, collision.gameObject.transform);
+            Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
         }
     }

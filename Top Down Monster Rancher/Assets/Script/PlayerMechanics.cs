@@ -30,23 +30,18 @@ public class PlayerMechanics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(Bullet, this.transform.position, Quaternion.identity);
         }
-        //MONEY NO WORK???
+
         money = howMany * 25;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "GameManager")
-        {
-            //GameManager.DecreaseDebt(money);
-           // money = 0;
-        }
-
-
+       
         if (collision.gameObject.tag == "Room")
         {
             mush += 1;

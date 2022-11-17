@@ -10,12 +10,15 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        rb.AddForce(Vector2.right * 7);
     }
 
     // Update is called once per frame
     void Update()
     {
-       rb.AddForce(Vector2.right * 6);  
+       rb.AddForce(Vector2.right * 7);
+
+        Destroy(this.gameObject, 3f);
     }
 
     void onTriggerEnter2D(Collider2D collision)

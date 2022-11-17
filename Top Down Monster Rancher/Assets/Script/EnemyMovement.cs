@@ -42,7 +42,7 @@ public class EnemyMovement : MonoBehaviour
             }
         }
 
-        Debug.Log($"{roomTrans.Length.ToString()} Room(s) found.");
+        Debug.Log($"{roomTrans.Length.ToString()} found.");
 
 
 
@@ -66,19 +66,19 @@ public class EnemyMovement : MonoBehaviour
 
         if (collision.gameObject.tag == "Room")
         {
-            Instantiate(Blood, collision.gameObject.transform);
+            Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "Tree")
         {
-            Instantiate(Blood, collision.gameObject.transform);
+            Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "Rock")
         {
-            Instantiate(Blood, collision.gameObject.transform);
+            Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
         }
     }
