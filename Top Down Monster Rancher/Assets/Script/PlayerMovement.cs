@@ -9,10 +9,12 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rigidbody;           
     public Animator anim;
 
+
     // Start is called before the first frame update
     void Start()
     {
-       transform.position = new Vector2(0f, 0f);
+        //transform.position = new Vector2(0f, 0f);;
+        
         rigidbody = this.GetComponent<Rigidbody2D>();
         anim = this.GetComponent<Animator>();
     }

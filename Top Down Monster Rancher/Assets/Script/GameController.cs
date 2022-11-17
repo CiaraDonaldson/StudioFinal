@@ -10,8 +10,8 @@ public class GameController : MonoBehaviour
     public int debt = 100;
     public int saved = 0;
 
-    public GameObject go; 
-
+    public GameObject go;
+    private bool done = false;
     public PlayerMechanics PlayerScript;
     // Start is called before the first frame update
 
@@ -29,9 +29,9 @@ public class GameController : MonoBehaviour
  
     void Update()
     {
-        
 
-            if (debt <= 0)
+
+        if (debt <= 0)
         {
            SceneManager.LoadScene("Your Farm");
             debt = 100;
@@ -55,6 +55,7 @@ public class GameController : MonoBehaviour
         {
             saved = 0;
             Debug.Log(saved);
+            done = true;
         }
     }
 

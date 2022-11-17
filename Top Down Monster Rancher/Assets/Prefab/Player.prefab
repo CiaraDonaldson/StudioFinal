@@ -91,6 +91,7 @@ MonoBehaviour:
   movement: {x: 0, y: 0}
   rigidbody: {fileID: 8947808701607140052}
   anim: {fileID: 8964945656262775563}
+  spawn: {fileID: 5948987004572233508, guid: ff81e3185239fbb4e8a25f4f390711bb, type: 3}
 --- !u!212 &8947808701607140058
 SpriteRenderer:
   m_ObjectHideFlags: 0
