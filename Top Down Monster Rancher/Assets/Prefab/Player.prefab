@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8947808701607140057}
+  - component: {fileID: 1095691550094592484}
   - component: {fileID: 8947808701607140062}
   - component: {fileID: 8947808701607140056}
   - component: {fileID: 8947808701607140058}
@@ -37,6 +38,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1095691550094592484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8947808701607140053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75164a9ff4ae8640b11f23c87857313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8947808701607140062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,6 +65,9 @@ MonoBehaviour:
   Room: {fileID: 636997522942542729, guid: 5216d3da87d82204d9a8e589279a4c3f, type: 3}
   Tree: {fileID: 636997522942542729, guid: c832f3fb39c04a24f81767feae2339c9, type: 3}
   Rock: {fileID: 636997522942542729, guid: 74ab16713ee3bbe42834c096fc0303e0, type: 3}
+  Room2: {fileID: 636997522942542729, guid: 876586b357a666840b6ecdcdcfe94220, type: 3}
+  Tree2: {fileID: 636997522942542729, guid: 7cb4623f868d38e439808a16cb89a80b, type: 3}
+  Rock2: {fileID: 636997522942542729, guid: 11e2ef9831d1bbf4b8022f49c4afb5a2, type: 3}
   Bullet: {fileID: 8806444799239173949, guid: 3daf6fafd8d7c04448655082f9a766b7, type: 3}
   mush: 0
   root: 0

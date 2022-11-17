@@ -9,6 +9,9 @@ TagManager:
   - Bullet
   - Tree
   - Rock
+  - Rock2
+  - Tree2
+  - Room2
   layers:
   - Default
   - TransparentFX

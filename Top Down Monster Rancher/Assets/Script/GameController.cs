@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-       // DontDestroyOnLoad(this.gameObject);
+       DontDestroyOnLoad(this.gameObject);
         PlayerScript = FindObjectOfType<PlayerMechanics>();
         go = GameObject.Find("Player");
         PlayerScript = (PlayerMechanics)go.GetComponent(typeof(PlayerMechanics));
@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
     {
         
 
-        if (debt <= 0)
+            if (debt <= 0)
         {
            SceneManager.LoadScene("Your Farm");
             debt = 100;
@@ -47,6 +47,14 @@ public class GameController : MonoBehaviour
         {
             debt -= saved;
             Debug.Log(debt);
+        }
+    }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            saved = 0;
+            Debug.Log(saved);
         }
     }
 

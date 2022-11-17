@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement1 : MonoBehaviour
 {
 
     public float speed = 2f;
@@ -26,7 +26,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
 
-        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Room");
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Tree");
 
         roomTrans = new Transform[gameObjects.Length];
 
