@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMechanics : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class PlayerMechanics : MonoBehaviour
     public int money = 0;
     public GameController GameManager;
 
-   
+    public TextMeshProUGUI Hold;
+    public TextMeshProUGUI Money;
     // Start is called before the first frame update
     void Start()
     {
