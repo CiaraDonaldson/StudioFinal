@@ -26,6 +26,13 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
 
+
+        if (counter == 0)
+        {
+            anim.Play("Nothing");
+        }
+        
+
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Room");
 
         roomTrans = new Transform[gameObjects.Length];
@@ -57,7 +64,6 @@ public class EnemyMovement : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             counter++;
-
         }
     }
 
@@ -89,5 +95,6 @@ public class EnemyMovement : MonoBehaviour
         yield return new WaitForSeconds(5);
         rb.isKinematic = true;
         counter = 0;
+        anim.Play("Stand");
     }
 }

@@ -26,7 +26,14 @@ public class EnemyMovement1 : MonoBehaviour
     void Update()
     {
 
-        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Tree");
+
+        if (counter == 0)
+        {
+            anim.Play("Nothing");
+        }
+
+
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Room");
 
         roomTrans = new Transform[gameObjects.Length];
 
@@ -42,7 +49,7 @@ public class EnemyMovement1 : MonoBehaviour
             }
         }
 
-        Debug.Log($"{roomTrans.Length.ToString()} Room(s) found.");
+        Debug.Log($"{roomTrans.Length.ToString()} found.");
 
 
 
@@ -57,12 +64,12 @@ public class EnemyMovement1 : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             counter++;
-
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (collision.gameObject.tag == "Room")
         {
             Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
@@ -88,5 +95,6 @@ public class EnemyMovement1 : MonoBehaviour
         yield return new WaitForSeconds(5);
         rb.isKinematic = true;
         counter = 0;
+        anim.Play("Stand");
     }
 }
