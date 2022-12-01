@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
+
 
 public class PlayerMechanics : MonoBehaviour
 {
@@ -19,30 +21,43 @@ public class PlayerMechanics : MonoBehaviour
     public int howMany = 0;
     public int money = 0;
     public GameController GameManager;
+    public Rigidbody2D rb;
 
-    public TextMeshProUGUI Hold;
-    public TextMeshProUGUI Money;
+
+    public TextMeshProUGUI Holdcount;
+    public TextMeshProUGUI Moneycount;
     // Start is called before the first frame update
     void Start()
     {
-       this.gameObject.transform.position = new Vector3(0,0,-1);
+        rb = GetComponent<Rigidbody2D>();
+        Holdcount = GetComponent<TextMeshProUGUI>();
+        Moneycount = GetComponent<TextMeshProUGUI>();
+
+        this.gameObject.transform.position = new Vector3(0,0,-1);
        GameManager.GetComponent<GameController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = mousePosition - transform.position;
-        float angle = Vector2.SignedAngle(Vector2.right, direction);
-
-        if (Input.GetMouseButtonDown(0))
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Start")
         {
-            Instantiate(Bullet, this.transform.position, Quaternion.identity);
+            Destroy(rb);
+        }
+        else if (scene.name == "Your Farm" & this.gameObject.GetComponent<Rigidbody2D>() == null)
+        {
+            this.gameObject.AddComponent<Rigidbody2D>();
         }
 
+        rb = GetComponent<Rigidbody2D>();
+        this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+
+
         money = howMany * 25;
+
+        Moneycount.text = money.ToString();
+        Holdcount.text = howMany.ToString();
     }
 
     void OnCollisionEnter2D(Collision2D collision)

@@ -16,16 +16,11 @@ public class EnemyMovement1 : MonoBehaviour
     public GameObject Blood;
     void Start()
     {
-        //GameObject[] gos;
-        //gos = GameObject.FindGameObjectsWithTag("Room");
-
-        rb = GetComponent<Rigidbody2D>();
-
-
+    
     }
     void Update()
     {
-
+        rb = GetComponent<Rigidbody2D>();
 
         if (counter == 0)
         {
@@ -52,11 +47,12 @@ public class EnemyMovement1 : MonoBehaviour
         Debug.Log($"{roomTrans.Length.ToString()} found.");
 
 
-
+        this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
         if (counter == 3)
         {
             anim.Play("Sleep");
             StartCoroutine("Sleeping");
+
         }
     }
     void OnTriggerEnter2D(Collider2D collision)
@@ -91,9 +87,12 @@ public class EnemyMovement1 : MonoBehaviour
 
     IEnumerator Sleeping()
     {
-        rb.isKinematic = false;
+        //rb.isKinematic = false;
+        Destroy(rb);
         yield return new WaitForSeconds(5);
-        rb.isKinematic = true;
+        this.gameObject.AddComponent<Rigidbody2D>();
+
+        //rb.isKinematic = true;
         counter = 0;
         anim.Play("Stand");
     }

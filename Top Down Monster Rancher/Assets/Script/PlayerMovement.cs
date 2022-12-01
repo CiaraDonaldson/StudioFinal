@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed = 1f;   
     public Vector2 movement;           
-    public Rigidbody2D rigidbody;           
+    public Rigidbody2D rb;           
     public Animator anim;
 
 
@@ -15,20 +15,22 @@ public class PlayerMovement : MonoBehaviour
     {
         //transform.position = new Vector2(0f, 0f);;
         
-        rigidbody = this.GetComponent<Rigidbody2D>();
-        anim = this.GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        rb = GetComponent<Rigidbody2D>();
+        rb.freezeRotation = true;
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
     }
     void FixedUpdate()
     {
 
-        rigidbody.MovePosition(rigidbody.position + movement * movementSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(GetComponent<Rigidbody2D>().position + movement * movementSpeed * Time.fixedDeltaTime);
         if (movement.y < 0)
         {
             anim.Play("PlayerUp");

@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 358813674}
   - component: {fileID: 358813673}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4976,6 +4976,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2079052547804752236, guid: 48cd169694231a747a8da4061476956c, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079052547804752236, guid: 48cd169694231a747a8da4061476956c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+    - target: {fileID: 2079052547804752236, guid: 48cd169694231a747a8da4061476956c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290608337868219946, guid: 48cd169694231a747a8da4061476956c, type: 3}
+      propertyPath: timeBetweenFiring
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8947808701607140053, guid: 48cd169694231a747a8da4061476956c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5029,6 +5045,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8947808701607140062, guid: 48cd169694231a747a8da4061476956c, type: 3}
+      propertyPath: Hold
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947808701607140062, guid: 48cd169694231a747a8da4061476956c, type: 3}
+      propertyPath: Money
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947808701607140062, guid: 48cd169694231a747a8da4061476956c, type: 3}
       propertyPath: money
       value: 1000
       objectReference: {fileID: 0}
@@ -5037,8 +5061,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8806444799239173949, guid: 3daf6fafd8d7c04448655082f9a766b7, type: 3}
     - target: {fileID: 8947808701607140062, guid: 48cd169694231a747a8da4061476956c, type: 3}
+      propertyPath: Holdcount
+      value: 
+      objectReference: {fileID: 6104481891327161085, guid: b84f6046b525af841a3e22ca442c8707, type: 3}
+    - target: {fileID: 8947808701607140062, guid: 48cd169694231a747a8da4061476956c, type: 3}
+      propertyPath: Moneycount
+      value: 
+      objectReference: {fileID: 6111792398725943136, guid: 1c6ff5ade7a68ed4d8da149008a44542, type: 3}
+    - target: {fileID: 8947808701607140062, guid: 48cd169694231a747a8da4061476956c, type: 3}
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 8572663088352648871, guid: d382b65280c7474408890c639ec286ad, type: 3}
+    - target: {fileID: 9038816782008849858, guid: 48cd169694231a747a8da4061476956c, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038816782008849858, guid: 48cd169694231a747a8da4061476956c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+    - target: {fileID: 9038816782008849858, guid: 48cd169694231a747a8da4061476956c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48cd169694231a747a8da4061476956c, type: 3}
