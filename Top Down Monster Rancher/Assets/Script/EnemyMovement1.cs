@@ -21,6 +21,7 @@ public class EnemyMovement1 : MonoBehaviour
     void Update()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.freezeRotation = true;
 
         if (counter == 0)
         {

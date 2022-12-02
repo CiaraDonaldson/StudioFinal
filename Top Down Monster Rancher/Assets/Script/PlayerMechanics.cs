@@ -43,7 +43,10 @@ public class PlayerMechanics : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Start")
         {
-            Destroy(rb);
+            if (rb)
+            {
+                Destroy(rb);
+            }
         }
         else if (scene.name == "Your Farm" & this.gameObject.GetComponent<Rigidbody2D>() == null)
         {
@@ -56,8 +59,8 @@ public class PlayerMechanics : MonoBehaviour
 
         money = howMany * 25;
 
-        Moneycount.text = money.ToString();
-        Holdcount.text = howMany.ToString();
+        Moneycount.SetText(money.ToString());
+        Holdcount.SetText(howMany.ToString());
     }
 
     void OnCollisionEnter2D(Collision2D collision)

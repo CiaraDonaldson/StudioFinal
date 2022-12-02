@@ -21,6 +21,7 @@ public class EnemyMovement2 : MonoBehaviour
     void Update()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.freezeRotation = true;
 
         if (counter == 0)
         {
@@ -87,12 +88,10 @@ public class EnemyMovement2 : MonoBehaviour
 
     IEnumerator Sleeping()
     {
-        //rb.isKinematic = false;
         Destroy(rb);
         yield return new WaitForSeconds(5);
         this.gameObject.AddComponent<Rigidbody2D>();
 
-        //rb.isKinematic = true;
         counter = 0;
         anim.Play("Stand");
     }

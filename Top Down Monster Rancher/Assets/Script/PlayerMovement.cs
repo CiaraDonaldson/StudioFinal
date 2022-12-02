@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
+       
 
         rb.MovePosition(GetComponent<Rigidbody2D>().position + movement * movementSpeed * Time.fixedDeltaTime);
         if (movement.y < 0)

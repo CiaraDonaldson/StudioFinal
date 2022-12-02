@@ -68,5 +68,7 @@ public class GameController : MonoBehaviour
     public void Starting()
     {
         SceneManager.LoadScene("Your Farm");
+
+       // if (!rb) { rb = gameObject.AddComponent<Rigidbody2D>(); }
     }
 }
