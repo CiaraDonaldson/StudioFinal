@@ -26,6 +26,8 @@ public class PlayerMechanics : MonoBehaviour
 
     public TextMeshProUGUI Holdcount;
     public TextMeshProUGUI Moneycount;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,10 @@ public class PlayerMechanics : MonoBehaviour
             this.gameObject.AddComponent<Rigidbody2D>();
         }
 
+       
+            
+        
+
         rb = GetComponent<Rigidbody2D>();
         this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
 
@@ -66,6 +72,8 @@ public class PlayerMechanics : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
        
+       
+
         if (collision.gameObject.tag == "Room")
         {
             mush += 1;
