@@ -7,6 +7,6 @@ public class ChangeScene : MonoBehaviour
 {
     void OnEnable()
     {
-        SceneManager.LoadScene("Your Farm", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Your Farm", LoadSceneMode.Single);
     }
 }

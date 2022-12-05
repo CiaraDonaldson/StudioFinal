@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-       DontDestroyOnLoad(this.gameObject);
+       
         PlayerScript = FindObjectOfType<PlayerMechanics>();
         go = GameObject.Find("Player");
         PlayerScript = (PlayerMechanics)go.GetComponent(typeof(PlayerMechanics));
@@ -31,11 +31,11 @@ public class GameController : MonoBehaviour
     {
 
 
-        if (debt <= 0)
+        /*if (debt <= 0)
         {
            SceneManager.LoadScene("Your Farm");
             debt = 100;
-        }
+        }*/
     }
     void FixedUpdate()
     {
@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
     }*/
     public void Starting()
     {
-        SceneManager.LoadScene("Your Farm");
+        SceneManager.LoadScene("Toriel");
 
        // if (!rb) { rb = gameObject.AddComponent<Rigidbody2D>(); }
     }

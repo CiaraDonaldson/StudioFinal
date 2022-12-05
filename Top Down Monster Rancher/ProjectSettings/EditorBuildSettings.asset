@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 2c4f2b5487b43664ebc7064b0c16055e
   - enabled: 1
-    path: Assets/Scenes/Your Farm.unity
-    guid: 63452a7727911014ca4fc74a91cafba5
-  - enabled: 1
     path: Assets/Scenes/Toriel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Your Farm.unity
+    guid: 63452a7727911014ca4fc74a91cafba5
   - enabled: 1
     path: Assets/Scenes/First Level.unity
     guid: 4a0e8a16d99750e42902bdb4934cb7e4
