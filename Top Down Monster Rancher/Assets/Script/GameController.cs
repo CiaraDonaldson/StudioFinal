@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     public int saved = 0;
 
     public GameObject go;
-    private bool done = false;
+    
     public PlayerMechanics PlayerScript;
     // Start is called before the first frame update
 
@@ -55,7 +55,6 @@ public class GameController : MonoBehaviour
         {
             saved = 0;
             Debug.Log(saved);
-            done = true;
         }
     }
 

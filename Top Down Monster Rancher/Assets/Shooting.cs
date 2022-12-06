@@ -38,7 +38,7 @@ public class Shooting : MonoBehaviour
         }
 
         Scene scene = SceneManager.GetActiveScene();
-        if (Input.GetMouseButtonDown(0) && canFire && scene.name != "Start")
+        if (Input.GetMouseButtonDown(0) && canFire && scene.name != "Toriel")
             {
                 canFire = false;
                 Instantiate(bullet, bulletTransform.position, Quaternion.identity);

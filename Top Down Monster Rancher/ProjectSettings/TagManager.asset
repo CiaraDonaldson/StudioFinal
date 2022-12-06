@@ -12,6 +12,7 @@ TagManager:
   - Rock2
   - Tree2
   - Room2
+  - TextChange
   layers:
   - Default
   - TransparentFX
