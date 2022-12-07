@@ -5,11 +5,11 @@ using UnityEngine;
 public class MonsterController : MonoBehaviour
 {
     private float timeToChangeDirection;
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D rb;
 
     public void Start()
     {
-        rigidbody = this.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         ChangeDirection();
     }
 
@@ -23,7 +23,7 @@ public class MonsterController : MonoBehaviour
             ChangeDirection();
         }
 
-        rigidbody.velocity = transform.up * 2;
+        rb.velocity = transform.up * 2;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
