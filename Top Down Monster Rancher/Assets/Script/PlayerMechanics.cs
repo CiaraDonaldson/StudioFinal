@@ -35,13 +35,14 @@ public class PlayerMechanics : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         this.gameObject.transform.position = new Vector3(0,0,-1);
 
-        HoldScript = FindObjectOfType<HoldCounter>();
-        MoneyScript = FindObjectOfType<MoneyCounter>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        HoldScript = FindObjectOfType<HoldCounter>();
+        MoneyScript = FindObjectOfType<MoneyCounter>();
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Toriel")
         {

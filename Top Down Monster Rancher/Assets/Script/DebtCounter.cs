@@ -6,13 +6,14 @@ using TMPro;
 public class DebtCounter : MonoBehaviour
 {
     public TextMeshProUGUI debtCounter;
-    public int debt = 100;
+    public int debt = 10000;
 
  
     void Awake()
     {
         
         debtCounter = GetComponent<TextMeshProUGUI>();
+        debt = GameController.instance.debt;
     }
 
 

@@ -25,8 +25,7 @@ public class GameController : MonoBehaviour
         PlayerScript = FindObjectOfType<PlayerMechanics>();
         go = GameObject.Find("Player");
         PlayerScript = (PlayerMechanics)go.GetComponent(typeof(PlayerMechanics));
-        DebtScript = FindObjectOfType<DebtCounter>();
-        MoneyScript = FindObjectOfType<MoneyCounter>();
+   
         Debug.Log(debtmon);
 
     }
@@ -34,7 +33,8 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-
+        DebtScript = FindObjectOfType<DebtCounter>();
+        MoneyScript = FindObjectOfType<MoneyCounter>();
 
         /*if (debt <= 0)
         {
