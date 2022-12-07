@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance;
 
-    public int debtmon = 100;
+    public int debtmon = 10000;
     public int saved = 0;
 
     public GameObject go;

@@ -13,7 +13,7 @@ public class DebtCounter : MonoBehaviour
     {
         
         debtCounter = GetComponent<TextMeshProUGUI>();
-        debt = GameController.instance.debt;
+        debt = GameController.instance.debtmon;
     }
 
 
