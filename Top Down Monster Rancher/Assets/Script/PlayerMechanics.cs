@@ -7,6 +7,7 @@ using TMPro;
 
 public class PlayerMechanics : MonoBehaviour
 {
+    public static PlayerMechanics instance;
 
     public GameObject Room;
     public GameObject Tree;
@@ -21,26 +22,21 @@ public class PlayerMechanics : MonoBehaviour
     public int howMany = 0;
     public int money = 0;
     public int holding = 0;
-
-    public GameController GameManager;
     public Rigidbody2D rb;
 
+    public HoldCounter HoldScript;
+    public MoneyCounter MoneyScript;
 
-    public TextMeshProUGUI Holdcount;
-    public TextMeshProUGUI Moneycount;
-
-    private GameObject can;
 
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>();
-        can = GameObject.Find("Canvas");
-        Holdcount = can.GetComponent<TextMeshProUGUI>();
-        Moneycount = can.GetComponent<TextMeshProUGUI>();
-
         this.gameObject.transform.position = new Vector3(0,0,-1);
-       GameManager.GetComponent<GameController>();
+
+        HoldScript = FindObjectOfType<HoldCounter>();
+        MoneyScript = FindObjectOfType<MoneyCounter>();
     }
 
     // Update is called once per frame
@@ -64,74 +60,83 @@ public class PlayerMechanics : MonoBehaviour
         this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
 
 
-        money = howMany * 25;
+        
         holding = mush + root + pebble;
 
-        Moneycount.SetText(money.ToString());
-        Holdcount.SetText(holding.ToString());
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-       
-       
 
         if (collision.gameObject.tag == "Room")
         {
             mush += 1;
             Destroy(collision.gameObject);
-         
+            HoldScript.RunCo();
         }
         if (collision.gameObject.tag == "Room2")
         {
             mush += 1;
             Destroy(collision.gameObject);
-         
+            HoldScript.RunCo();
         }
 
         if (collision.gameObject.name == "right wall" && mush >= 1)
         {
             mush--;
             howMany++;
+            money = howMany * 25;
             Instantiate(Room2, collision.gameObject.transform.position, Quaternion.identity);
+            HoldScript.RunCo();
+            MoneyScript.RunCo();
         }
         if (collision.gameObject.tag == "Tree")
         {
             root += 1;
             Destroy(collision.gameObject);
-
+            HoldScript.RunCo();
         }
         if (collision.gameObject.tag == "Tree2")
         {
             root += 1;
             Destroy(collision.gameObject);
-
+            HoldScript.RunCo();
         }
 
         if (collision.gameObject.name == "right wall" && root >= 1)
         {
             root--;
-            howMany+= 2;
+            howMany += 2;
+            money = howMany * 25;
             Instantiate(Tree2, collision.gameObject.transform.position, Quaternion.identity);
+            HoldScript.RunCo();
+            MoneyScript.RunCo();
         }
         if (collision.gameObject.tag == "Rock")
         {
             pebble += 1;
             Destroy(collision.gameObject);
-         
+            HoldScript.RunCo();
         }
         if (collision.gameObject.tag == "Rock2")
         {
             pebble += 1;
             Destroy(collision.gameObject);
-         
+            HoldScript.RunCo();
         }
 
         if (collision.gameObject.name == "right wall" && pebble >= 1)
         {
             pebble--;
-            howMany+=3;
+            howMany += 3;
+            money = howMany * 25;
             Instantiate(Rock2, collision.gameObject.transform.position, Quaternion.identity);
+            HoldScript.RunCo();
+            MoneyScript.RunCo();
         }
+        
+            
+            
+        
     }
 }

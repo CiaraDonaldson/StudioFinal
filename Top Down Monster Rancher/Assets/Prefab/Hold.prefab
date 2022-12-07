@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6104481891327161086}
   - component: {fileID: 6104481891327161085}
   - component: {fileID: 6104481891327161087}
+  - component: {fileID: 3964311566707471106}
   m_Layer: 5
   m_Name: Hold
   m_TagString: Untagged
@@ -148,3 +149,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75164a9ff4ae8640b11f23c87857313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3964311566707471106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6104481891327161081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21fc423031d92b84883381e3f7241890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdCounter: {fileID: 0}
+  holdd: 0

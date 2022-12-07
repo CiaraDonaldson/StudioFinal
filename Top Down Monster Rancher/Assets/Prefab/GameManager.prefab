@@ -51,6 +51,7 @@ MonoBehaviour:
   saved: 0
   go: {fileID: 8947808701607140053, guid: 48cd169694231a747a8da4061476956c, type: 3}
   PlayerScript: {fileID: 8947808701607140062, guid: 48cd169694231a747a8da4061476956c, type: 3}
+  debtCounter: {fileID: 8284449108237148715, guid: e9e5e79b1e9885f4e90c00b35ab69716, type: 3}
 --- !u!212 &8572663088352648868
 SpriteRenderer:
   m_ObjectHideFlags: 0

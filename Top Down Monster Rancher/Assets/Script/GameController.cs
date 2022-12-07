@@ -2,31 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class GameController : MonoBehaviour
 {
-    
-    public int debt = 100;
+    public static GameController instance;
+    public int debtmon = 100;
     public int saved = 0;
 
     public GameObject go;
-    
+
     public PlayerMechanics PlayerScript;
+    public DebtCounter DebtScript;
+    public MoneyCounter MoneyScript;
     // Start is called before the first frame update
 
     void Start()
     {
-       
+        instance = this;
         PlayerScript = FindObjectOfType<PlayerMechanics>();
         go = GameObject.Find("Player");
         PlayerScript = (PlayerMechanics)go.GetComponent(typeof(PlayerMechanics));
-
-        Debug.Log(debt);
+        DebtScript = FindObjectOfType<DebtCounter>();
+        MoneyScript = FindObjectOfType<MoneyCounter>();
+        Debug.Log(debtmon);
 
     }
 
- 
+
     void Update()
     {
 
@@ -39,14 +43,17 @@ public class GameController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        saved = PlayerScript.money;
+
+        saved = PlayerMechanics.instance.money;
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Player")
         {
-            debt -= saved;
-            Debug.Log(debt);
+
+            debtmon -= saved;
+            Debug.Log(debtmon);
+            StartCoroutine(moneySub());
         }
     }
     void OnCollisionExit2D(Collision2D collision)
@@ -58,16 +65,17 @@ public class GameController : MonoBehaviour
         }
     }
 
-    /*public void DecreaseDebt(int money)
-    {
-        debt -= money;
-        Debug.Log(debt);
-    
-    }*/
     public void Starting()
     {
         SceneManager.LoadScene("Toriel");
 
-       // if (!rb) { rb = gameObject.AddComponent<Rigidbody2D>(); }
+    }
+
+    private IEnumerator moneySub()
+    {
+        DebtScript.RunCo();
+        yield return new WaitForSeconds(1f);
+        PlayerMechanics.instance.money = 0;
+        MoneyScript.RunCo();
     }
 }
