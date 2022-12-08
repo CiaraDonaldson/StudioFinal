@@ -451,6 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccf88d3130764448b35c199595ac657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  limit: 0
 --- !u!61 &44376582
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1230,7 +1231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dont forget to pay of your debt in there!
+  m_text: Dont forget to pay off your debt in there!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2738,7 +2739,7 @@ PlayableDirector:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 7487b0b774da4ea4d91af03d012eafe4, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -2792,14 +2793,72 @@ PlayableDirector:
     value: {fileID: 918143640}
   - key: {fileID: -7376418021793231756, guid: 7487b0b774da4ea4d91af03d012eafe4, type: 2}
     value: {fileID: 1222620960}
+  - key: {fileID: 5471005074027908452, guid: 7487b0b774da4ea4d91af03d012eafe4, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -9033703930477614746, guid: 7487b0b774da4ea4d91af03d012eafe4, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1061940799731315708, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 519420033}
+  - key: {fileID: 5869304848341894213, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 570580553}
+  - key: {fileID: 6143605113198173791, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 415648047}
+  - key: {fileID: 4235880755001105348, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 1193528119}
+  - key: {fileID: 7324291659619787180, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 390446316}
+  - key: {fileID: -2726561081867257308, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 35632044}
+  - key: {fileID: 2087648033656442362, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 322604738}
+  - key: {fileID: -8531301744379844148, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 635645020}
+  - key: {fileID: -8510900496450055434, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 1602832595}
+  - key: {fileID: 2914365943918514277, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 1970047762}
+  - key: {fileID: -6642575137061129679, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 853578219}
+  - key: {fileID: -8343477544818852643, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 430729105}
+  - key: {fileID: 161905003418035080, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 1842934510}
+  - key: {fileID: -3433442105893351472, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 1913880755}
+  - key: {fileID: -8350264805988128788, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 1751866419}
+  - key: {fileID: 2377979887627166076, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 378044074}
+  - key: {fileID: 5431279950129340960, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 528907719}
+  - key: {fileID: 1581485292367378676, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 1694483390}
+  - key: {fileID: -274192928211782153, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 1312163173}
+  - key: {fileID: -5491178673897772922, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 1933530906}
+  - key: {fileID: 4507307222327668977, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 493608028}
+  - key: {fileID: -4073779182578682362, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 277764118}
+  - key: {fileID: 6859977830390470173, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 918143640}
+  - key: {fileID: 8270787514681896779, guid: b43304c2c0e9746459030efbcf2d9407, type: 2}
+    value: {fileID: 1222620960}
   m_ExposedReferences:
     m_References:
+    - 43aecc0f7b4132f4c87d99d5fe7eace4: {fileID: 296252379}
     - ca86407860314994a921be0b63a8c88b: {fileID: 253067068}
     - 3e733d141cf86c448a623dbf6d8beddd: {fileID: 1987610031}
     - d22bf9e3be3260142acff9e32e03214f: {fileID: 1323636466}
+    - 12743132c149e6647a1189885d3e6923: {fileID: 253067068}
     - f30faa388754b6844952e2d7ab03655b: {fileID: 296252379}
     - adca6bfd50667b541a6dc800f3d40285: {fileID: 1005452247}
+    - 05d3cd49dd5f0db41bc3a8a1f9468686: {fileID: 1005452247}
+    - 3a5933b0729be2c43a0f5bb0f9d7d505: {fileID: 1079989295}
+    - 58a47c0eaeb268e4c8add46dd2720278: {fileID: 1323636466}
     - 1728391617be25f40b5f4cebfbc12952: {fileID: 1079989295}
+    - 8c6ca03ef48e63a4a802a62f54794b2b: {fileID: 1987610031}
 --- !u!1 &528907719
 GameObject:
   m_ObjectHideFlags: 0
@@ -6198,7 +6257,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 21
-      m_TileSpriteIndex: 21
+      m_TileSpriteIndex: 28
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6258,7 +6317,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 20
-      m_TileSpriteIndex: 20
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6298,7 +6357,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 20
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6649,8 +6708,8 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 605cae277381b344c8884b7838197e6d, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -46683065, guid: d4eeefa27ee53524196cc28691742287, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 5
     m_Data: {fileID: 1571556807, guid: 92f55c81ec57afe4ea3a4fef25d89409, type: 3}
   - m_RefCount: 76
@@ -6690,9 +6749,9 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: 1502995353, guid: d4eeefa27ee53524196cc28691742287, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 178612342, guid: d4eeefa27ee53524196cc28691742287, type: 3}
+    m_Data: {fileID: -46683065, guid: d4eeefa27ee53524196cc28691742287, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 765083876, guid: d4eeefa27ee53524196cc28691742287, type: 3}
+    m_Data: {fileID: 178612342, guid: d4eeefa27ee53524196cc28691742287, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1637140507, guid: d4eeefa27ee53524196cc28691742287, type: 3}
   - m_RefCount: 3
@@ -6705,8 +6764,8 @@ Tilemap:
     m_Data: {fileID: 1262805836, guid: d4eeefa27ee53524196cc28691742287, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1182351113, guid: d4eeefa27ee53524196cc28691742287, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 765083876, guid: d4eeefa27ee53524196cc28691742287, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1405238072, guid: d4eeefa27ee53524196cc28691742287, type: 3}
   - m_RefCount: 5
@@ -7472,7 +7531,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Now thats all, Have fun hunter!
+  m_text: Now thats all, have fun hunter!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -7776,6 +7835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d6a588d7c62b941ab856e6dcd7f58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  limit: 0
 --- !u!61 &1006996358
 BoxCollider2D:
   m_ObjectHideFlags: 0

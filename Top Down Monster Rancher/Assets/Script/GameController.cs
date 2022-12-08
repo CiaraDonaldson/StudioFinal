@@ -36,11 +36,12 @@ public class GameController : MonoBehaviour
         DebtScript = FindObjectOfType<DebtCounter>();
         MoneyScript = FindObjectOfType<MoneyCounter>();
 
-        /*if (debt <= 0)
+        
+        if (debtmon <= 0)
         {
-           SceneManager.LoadScene("Your Farm");
-            debt = 100;
-        }*/
+           SceneManager.LoadScene("Ending");
+            
+        }
     }
     void FixedUpdate()
     {

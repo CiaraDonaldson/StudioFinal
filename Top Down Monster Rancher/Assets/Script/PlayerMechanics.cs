@@ -43,6 +43,7 @@ public class PlayerMechanics : MonoBehaviour
     {
         HoldScript = FindObjectOfType<HoldCounter>();
         MoneyScript = FindObjectOfType<MoneyCounter>();
+
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Toriel")
         {
