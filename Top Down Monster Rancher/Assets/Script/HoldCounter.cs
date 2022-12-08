@@ -13,6 +13,7 @@ public class HoldCounter : MonoBehaviour
     {
 
         holdCounter = GetComponent<TextMeshProUGUI>();
+        holdd = PlayerMechanics.instance.holding;
     }
 
 

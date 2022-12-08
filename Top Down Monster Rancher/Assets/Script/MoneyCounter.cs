@@ -13,6 +13,7 @@ public class MoneyCounter : MonoBehaviour
     {
 
         moneyCounter = GetComponent<TextMeshProUGUI>();
+        moneyy = PlayerMechanics.instance.money;
     }
 
 

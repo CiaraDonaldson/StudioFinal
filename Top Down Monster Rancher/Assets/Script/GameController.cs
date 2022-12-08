@@ -55,6 +55,7 @@ public class GameController : MonoBehaviour
             debtmon -= saved;
             Debug.Log(debtmon);
             StartCoroutine(moneySub());
+            PlayerMechanics.instance.howMany = 0;
         }
     }
     void OnCollisionExit2D(Collision2D collision)

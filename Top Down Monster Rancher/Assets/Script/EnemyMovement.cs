@@ -12,7 +12,7 @@ public class EnemyMovement : MonoBehaviour
     public int counter = 0;
     public Animator anim;
     public Rigidbody2D rb;
-    public Transform[] roomTrans;
+    public Transform[] monstTrans;
     public GameObject Blood;
     void Start()
     {
@@ -20,6 +20,7 @@ public class EnemyMovement : MonoBehaviour
     }
     void Update()
     {
+
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
 
@@ -27,26 +28,65 @@ public class EnemyMovement : MonoBehaviour
         {
             anim.Play("Nothing");
         }
-        
 
-        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Room");
-
-        roomTrans = new Transform[gameObjects.Length];
-
-        for (int i = 0; i < gameObjects.Length; i++)
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "First Level" || scene.name == "Your Farm")
         {
-            roomTrans[i] = gameObjects[i].transform;
-            range = Vector2.Distance(transform.position, roomTrans[i].position);
+            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Room");
 
+            monstTrans = new Transform[gameObjects.Length];
 
-            if (range > minDistance)
+            for (int i = 0; i < gameObjects.Length; i++)
             {
-                transform.position = Vector2.MoveTowards(transform.position, roomTrans[i].position, speed * Time.deltaTime);
+                monstTrans[i] = gameObjects[i].transform;
+                range = Vector2.Distance(transform.position, monstTrans[i].position);
+
+
+                if (range > minDistance)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, monstTrans[i].position, speed * Time.deltaTime);
+                }
+            }
+
+            Debug.Log($"{monstTrans.Length.ToString()} found.");
+        }
+        else if (scene.name == "Second Level")
+        {
+            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Tree");
+
+            monstTrans = new Transform[gameObjects.Length];
+
+            for (int i = 0; i < gameObjects.Length; i++)
+            {
+                monstTrans[i] = gameObjects[i].transform;
+                range = Vector2.Distance(transform.position, monstTrans[i].position);
+
+
+                if (range > minDistance)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, monstTrans[i].position, speed * Time.deltaTime);
+                }
+            }
+
+        }
+        else 
+        {
+            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Rock");
+
+            monstTrans = new Transform[gameObjects.Length];
+
+            for (int i = 0; i < gameObjects.Length; i++)
+            {
+                monstTrans[i] = gameObjects[i].transform;
+                range = Vector2.Distance(transform.position, monstTrans[i].position);
+
+
+                if (range > minDistance)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, monstTrans[i].position, speed * Time.deltaTime);
+                }
             }
         }
-
-        Debug.Log($"{roomTrans.Length.ToString()} found.");
-
 
         this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
         if (counter == 3)
