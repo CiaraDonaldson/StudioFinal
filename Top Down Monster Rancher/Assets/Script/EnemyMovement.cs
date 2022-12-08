@@ -14,9 +14,11 @@ public class EnemyMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Transform[] monstTrans;
     public GameObject Blood;
+    public AudioSource audio;
+    public AudioSource audio2;
     void Start()
     {
-       
+        
     }
     void Update()
     {
@@ -101,6 +103,7 @@ public class EnemyMovement : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             counter++;
+            audio2.Play();
         }
     }
 
@@ -111,18 +114,21 @@ public class EnemyMovement : MonoBehaviour
         {
             Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
+            audio.Play();
         }
 
         if (collision.gameObject.tag == "Tree")
         {
             Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
+            audio.Play();
         }
 
         if (collision.gameObject.tag == "Rock")
         {
             Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
+            audio.Play();
         }
     }
 

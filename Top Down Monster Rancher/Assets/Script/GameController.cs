@@ -42,6 +42,11 @@ public class GameController : MonoBehaviour
            SceneManager.LoadScene("Ending");
             
         }
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Ending")
+        {
+            Destroy(this.gameObject);
+        }
     }
     void FixedUpdate()
     {

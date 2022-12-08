@@ -56,10 +56,16 @@ public class PlayerMechanics : MonoBehaviour
         {
             this.gameObject.AddComponent<Rigidbody2D>();
         }
-               
-            
-        rb = GetComponent<Rigidbody2D>();
-        this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+        if (scene.name == "Ending")
+        {
+            Destroy(this.gameObject);
+        }
+
+            rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+        }
 
 
         

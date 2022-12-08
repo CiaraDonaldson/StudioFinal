@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class SceneControllerThree : MonoBehaviour
 {
     public int limit;
+    public TextMeshProUGUI limitText;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +21,23 @@ public class SceneControllerThree : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player" && limit <= 5000)
+        if (collision.gameObject.name == "Player")
         {
-            SceneManager.LoadScene("Third Level");
+            if (limit <= 5000)
+            {
+                SceneManager.LoadScene("Third Level");
+            }
+            else
+            {
+                limitText.gameObject.SetActive(true);
+            }
+        }
+    }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            limitText.gameObject.SetActive(false);
         }
     }
 }
