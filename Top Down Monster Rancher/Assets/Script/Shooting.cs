@@ -12,6 +12,10 @@ public class Shooting : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetweenFiring;
+
+    public int counter = 0;
+    public int milk = 100;
+    public bool stop = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +36,21 @@ public class Shooting : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > timeBetweenFiring)
             {
+                counter += 10;
                 canFire = true;
                 timer = 0;
             }
         }
+
+        if (counter == 50) 
+        {
+            milk -= counter;
+        }
+        else
+            if(milk == 0)
+            {
+                stop = true;
+            }
 
         Scene scene = SceneManager.GetActiveScene();
         if (Input.GetMouseButtonDown(0) && canFire && scene.name != "Toriel")
@@ -44,5 +59,11 @@ public class Shooting : MonoBehaviour
                 Instantiate(bullet, bulletTransform.position, Quaternion.identity);
             }
         
+    }
+
+    public void addMilk()
+    {
+        milk = 100;
+        stop = false;
     }
 }

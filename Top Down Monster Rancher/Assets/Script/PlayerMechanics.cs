@@ -51,6 +51,10 @@ public class PlayerMechanics : MonoBehaviour
             {
                 Destroy(rb);
             }
+            else if(Input.GetKey("Space") & Input.GetKey("x"))
+                {
+                SceneManager.LoadScene("Your Farm");
+                }
         }
         else if (scene.name == "Your Farm" & this.gameObject.GetComponent<Rigidbody2D>() == null)
         {
@@ -62,6 +66,7 @@ public class PlayerMechanics : MonoBehaviour
         }
 
             rb = GetComponent<Rigidbody2D>();
+
         if (rb != null)
         {
             this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;

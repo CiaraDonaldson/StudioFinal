@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
        
 
         rb.MovePosition(GetComponent<Rigidbody2D>().position + movement * movementSpeed * Time.fixedDeltaTime);
+
         if (movement.y < 0)
         {
             anim.Play("PlayerUp");

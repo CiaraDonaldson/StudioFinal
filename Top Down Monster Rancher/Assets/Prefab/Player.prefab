@@ -49,6 +49,9 @@ MonoBehaviour:
   bulletTransform: {fileID: 4812084663945296005}
   canFire: 0
   timeBetweenFiring: 1
+  counter: 0
+  milk: 100
+  stop: 0
 --- !u!1 &1649536836554580494
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,7 +101,7 @@ GameObject:
   - component: {fileID: 8964945656262775563}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,10 +159,9 @@ MonoBehaviour:
   howMany: 0
   money: 0
   holding: 0
-  GameManager: {fileID: 8572663088352648871, guid: d382b65280c7474408890c639ec286ad, type: 3}
   rb: {fileID: 0}
-  Holdcount: {fileID: 6104481891327161085, guid: b84f6046b525af841a3e22ca442c8707, type: 3}
-  Moneycount: {fileID: 6111792398725943136, guid: 1c6ff5ade7a68ed4d8da149008a44542, type: 3}
+  HoldScript: {fileID: 0}
+  MoneyScript: {fileID: 0}
 --- !u!114 &8947808701607140056
 MonoBehaviour:
   m_ObjectHideFlags: 0
