@@ -43,6 +43,10 @@ public class GameController : MonoBehaviour
             
         }
         Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Toriel" && Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Your Farm");
+        }
         if (scene.name == "Ending")
         {
             Destroy(this.gameObject);

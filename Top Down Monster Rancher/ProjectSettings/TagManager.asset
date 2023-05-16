@@ -13,6 +13,7 @@ TagManager:
   - Tree2
   - Room2
   - TextChange
+  - milk
   layers:
   - Default
   - TransparentFX
